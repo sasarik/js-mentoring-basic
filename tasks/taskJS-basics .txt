@@ -1,0 +1,100 @@
+// Task #1
+// Create MenuItem class (MenuItem.js)
+class MenuItem {
+    id; // string
+    menuItem; // Element
+    // @todo add properties
+
+    constructor(menuItemId, onClickCallback, onDeactivateCallback) {
+        this.menuItem = document.getElementById(menuItemId);
+        this.id = menuItemId;
+        // @todo Add implementation
+    }
+
+    addEventListener() {
+        // @todo Add implementation
+        // add event listener for click
+        // on click activate() should have been called
+    }
+
+    isActive() {
+        // @todo Add implementation
+        // should return boolean
+    }
+
+    activate() {
+        // @todo Add implementation
+        // onClickCallback should have been called
+        // should activate tab
+    }
+
+    deactivate() {
+        // @todo Add implementation
+        // onDeactivateCallback should have been called
+        // should deactivate tab
+    }
+}
+
+// Task #2
+// Create Section class (Section.js)
+class Section {
+    sectionElement;
+
+    constructor(sectionId) {
+        this.sectionElement = document.getElementById(sectionId);
+    }
+
+    show() {
+        // @todo Add implementation
+    }
+
+    hide() {
+        // @todo Add implementation
+    }
+}
+
+// Task #3
+// Create Menu class (Menu.js)
+class Menu {
+    menuItems = [];
+    menuElement;
+
+    constructor(elementId) {
+        this.menuElement = document.getElementById(elementId);
+    }
+
+    initializeMenu() {
+        if(this.menuElement) {
+            // @todo Add implementation
+            // 1. get child nodes of menu element (buttons) - @tip querySelectorAll
+            // 2. iterate over each button
+            // 3. foreach button create Section object and MenuItem object
+            // 4. tip: MenuItem onClickCallback, onDeactivateCallback
+        }
+    }
+
+    deactivatePreviouslySelected() {
+        // @todo Add implementation
+        // should call menuItem.deactivate() for active menu item
+    }
+
+    setActive(menuItemId) {
+        // @todo Add implementation
+        // should call menuItem.activate() for given menu item
+    }
+
+    selectDefault() {
+        // @todo Add implementation
+        // should select default menu item (first one or last selected from Local storage)
+    }
+}
+
+
+// task #4
+// index.js
+window.onload = function() {
+    // @todo make it works :)
+    const menu = new Menu(menuElementId);
+    menu.initializeMenu();
+    menu.selectDefault();
+}
